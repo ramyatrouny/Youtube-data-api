@@ -8,7 +8,7 @@
  * @apiName login
  * @apiDescription Authenticate a user
  * @apiUse loginInput
- * @apiGroup Everyone
+ * @apiGroup Authentication
  * @apiPermission isPublic
  */
 

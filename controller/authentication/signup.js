@@ -10,9 +10,16 @@
  * @apiName register
  * @apiDescription Register a new user
  * @apiUse registerInput
- * @apiGroup Everyone
+ * @apiGroup Authentication
  * @apiPermission isPublic
  */
+
+const fileName = __filename.split(/(\\|\/)/g).pop();
+const logger = require('../../config/logger');
+const Joi = require('joi');
+const bcrypt = require('bcrypt');
+
+const userModel = require('../../models/UserModel');
 
 module.exports = (req, res) => {
 
