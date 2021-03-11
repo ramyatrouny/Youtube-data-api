@@ -1,20 +1,24 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+require('dotenv').config();
+const express = require('express');
+const morgan = require('morgan');
+const path = require('path');
+const cors = require('cors')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const app = express();
 
-var app = express();
+const indexRouter = require('./routes/index');
 
-app.use(logger('dev'));
+app.use(morgan('dev'));
+
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/documentation', (req, res) => {
+    res.sendFile(path.join(__dirname + '/public/index.html'));
+});
+
+app.use('/api', indexRouter);
 
 module.exports = app;
