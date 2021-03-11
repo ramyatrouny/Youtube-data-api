@@ -1,8 +1,10 @@
 const express = require('express').Router();
 const { auth } = require('./index');
 
+
 // Authentication
-express.route('/auth/login').post(auth.login);
-express.route('/auth/register').post(auth.signup);
+express.route('/login').post(auth.login);
+express.route('/register').post(auth.signup);
+express.route('/refreshToken').post(auth.refreshToken);
 
 module.exports = express;
