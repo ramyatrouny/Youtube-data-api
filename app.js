@@ -7,8 +7,11 @@ const cors = require('cors')
 const app = express();
 
 const indexRouter = require('./routes/index');
+const connectDB = require('./config/db');
 
 app.use(morgan('dev'));
+
+connectDB();
 
 app.use(cors());
 app.use(express.json());
