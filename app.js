@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const app = express();
 
-const indexRouter = require('./routes/index');
+const indexRouter = require('./routes/api');
 const connectDB = require('./config/db');
 
 app.use(morgan('dev'));
