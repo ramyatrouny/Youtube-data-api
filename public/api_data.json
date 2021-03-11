@@ -12,7 +12,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "controller/user/login.js",
+    "filename": "controller/authentication/login.js",
     "groupTitle": "Authentication",
     "parameter": {
       "fields": {
@@ -37,6 +37,22 @@
   },
   {
     "type": " post ",
+    "url": "/auth/refresh",
+    "title": "Refresh user access token",
+    "name": "refreshToken",
+    "description": "<p>Refresh user token</p>",
+    "group": "Authentication",
+    "permission": [
+      {
+        "name": "isAuthenticated"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "controller/authentication/refreshToken.js",
+    "groupTitle": "Authentication"
+  },
+  {
+    "type": " post ",
     "url": "/auth/register",
     "title": "User signup",
     "name": "register",
@@ -48,7 +64,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "controller/user/signup.js",
+    "filename": "controller/authentication/signup.js",
     "groupTitle": "Authentication",
     "parameter": {
       "fields": {
@@ -87,7 +103,7 @@
   },
   {
     "type": " get ",
-    "url": "/auth/me",
+    "url": "/user/me",
     "title": "Logged in User Details",
     "name": "Personal_Details",
     "description": "<p>Get the current user details</p>",
@@ -102,24 +118,8 @@
     "groupTitle": "User"
   },
   {
-    "type": " post ",
-    "url": "/auth/refresh",
-    "title": "Refresh user access token",
-    "name": "refreshToken",
-    "description": "<p>Refresh user token</p>",
-    "group": "User",
-    "permission": [
-      {
-        "name": "isAuthenticated"
-      }
-    ],
-    "version": "0.0.0",
-    "filename": "controller/user/refreshToken.js",
-    "groupTitle": "User"
-  },
-  {
     "type": " put ",
-    "url": "/auth/:id/update",
+    "url": "/user/:id/update",
     "title": "Update logged in user information",
     "name": "updateUserDetails",
     "description": "<p>update user details</p>",

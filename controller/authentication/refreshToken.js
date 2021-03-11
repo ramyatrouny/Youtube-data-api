@@ -2,7 +2,7 @@
  * @api { post } /auth/refresh Refresh user access token
  * @apiName refreshToken
  * @apiDescription Refresh user token
- * @apiGroup User
+ * @apiGroup Authentication
  * @apiPermission isAuthenticated
  */
 
