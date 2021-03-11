@@ -32,7 +32,7 @@ module.exports = async (req, res, next) => {
 	}
 
 	logger.info(`${fileName} Trying to parse the JWT token`)
-	token = token.splice(7, token.length).trimLeft();
+	token = token.slice(7, token.length).trimLeft();
 
 	try {
 		logger.info(`${fileName} Trying to verify the JWT token`);
@@ -40,7 +40,7 @@ module.exports = async (req, res, next) => {
 		const decoded = await jwt.verify(token, process.env.JWT_SECRET);
 
 		logger.info(`${fileName} Decoded Token ${JSON.stringify(decoded)}`);
-		req.user = decoded.user.id
+		req.user = decoded.id
 
 		next();
 
