@@ -1,5 +1,5 @@
 /**
- * @api { get } /auth/me Logged in User Details
+ * @api { get } /user/me Logged in User Details
  * @apiName Personal Details
  * @apiDescription Get the current user details
  * @apiGroup User
