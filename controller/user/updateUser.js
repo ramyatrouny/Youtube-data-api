@@ -6,7 +6,7 @@
  * @apiParam {string} youtube_channel_id    user youtube channel id
  * */
 /**
- * @api { put } /user/:id/update Update logged in user information
+ * @api { put } /api/user/:id/update Update logged in user information
  * @apiName updateUserDetails
  * @apiDescription update user details
  * @apiUse updateUserInput
