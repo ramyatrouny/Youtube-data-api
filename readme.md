@@ -87,6 +87,7 @@ npm run dev
 ```bash
 http://localhost:3000
 ```
+![Alt text](/images/documentation.JPG?raw=true "Documentation")
 
 2. Postman Collection: 
 ```bash
