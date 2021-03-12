@@ -103,18 +103,18 @@
   },
   {
     "type": " post ",
-    "url": "/user/refreshToken",
+    "url": "/auth/refreshToken",
     "title": "Refresh  token",
     "name": "refreshToken",
     "description": "<p>Refresh user token</p>",
     "group": "User",
     "permission": [
       {
-        "name": "isAuthenticated"
+        "name": "Authentication"
       }
     ],
     "version": "0.0.0",
-    "filename": "controller/user/refreshToken.js",
+    "filename": "controller/authentication/refreshToken.js",
     "groupTitle": "User"
   },
   {
@@ -141,13 +141,6 @@
             "optional": false,
             "field": "email",
             "description": "<p>user email address</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "string",
-            "optional": false,
-            "field": "password",
-            "description": "<p>user password</p>"
           },
           {
             "group": "Parameter",
