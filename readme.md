@@ -95,6 +95,16 @@ https://www.getpostman.com/collections/1b4ea96b2a2d122e960f
 ```
 ![Alt text](/images/Postman.JPG?raw=true "Postman Collection")
 
+## Blocking Issues
+
+Personally, I couldn't add the endpoints that return the social media accounts details of a youtuber due to the API Limitations 
+
+Make sure to check the 2 following links:
+[Stackoverflow issue1](https://stackoverflow.com/questions/14926962/is-is-possible-to-get-a-channels-social-links-with-the-youtube-api) and [Stackoverflow issue2](https://stackoverflow.com/questions/32822009/how-to-get-user-links-through-youtube-api)
+
+I would really appreciate it if you take it into consideration 
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
