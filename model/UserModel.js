@@ -9,7 +9,7 @@ const userModel = mongoose.Schema({
         type: String,
         require: true,
     },
-    fullName: {
+    full_name: {
         type: String,
         require: true,
     },
