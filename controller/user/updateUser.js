@@ -36,9 +36,9 @@ module.exports = async (req, res) => {
             return res.status(400).json(validateBody.error.details)
         }
 
-        logger.info(`${fileName} Trying to update user ${req.user} with those new fields ${req.body}`)
+        logger.info(`${fileName} Trying to update user ${req.user} with those new fields ${JSON.stringify(req.body)}`)
         // Only update the user object 
-        const updateUser = await UserModel.findByIdAndUpdate(req.user, { "$set": req.body }, { returnNewDocument: true });
+        const updateUser = await UserModel.findByIdAndUpdate(req.user, { "$set": req.body }, { new: true });
 
         if (!updateUser) {
             logger.warn(`${fileName} Unable to update the user and return new result`);
