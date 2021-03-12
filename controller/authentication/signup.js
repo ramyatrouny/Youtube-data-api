@@ -45,7 +45,6 @@ module.exports = async (req, res) => {
 
         logger.info(`${fileName} Checking if the user ${email} already exists`);
         const userExists = await UserModel.findOne({ email });
-        console.log(userExists);
 
         if (userExists) {
             logger.warn(`${fileName} User already exists`);
