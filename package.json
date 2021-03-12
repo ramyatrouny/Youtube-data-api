@@ -8,6 +8,7 @@
     "doc": "apidoc -i controller/ -o public/"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
